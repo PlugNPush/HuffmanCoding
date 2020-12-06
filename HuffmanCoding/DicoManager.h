@@ -6,7 +6,7 @@ typedef struct
     int infonb;
     element* left;
     element* right;
-}element
+}element;
 
 #create_dico(
 

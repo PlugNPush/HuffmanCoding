@@ -1,4 +1,7 @@
-
+#include "global.h"
+#include "BinaryManager.h"
+#include "FileManager.h"
+#include "DicoManager.h"
 
 void add_charl(char*s)
 {
