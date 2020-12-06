@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1607273151 source:d:\documents\c\huffmancoding\huffmancoding\binarymanager.c
+	"BinaryManager.h"
+
+1607273151 d:\documents\c\huffmancoding\huffmancoding\binarymanager.h
+	"global.h"
+
+1607273151 d:\documents\c\huffmancoding\huffmancoding\global.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1607273151 source:d:\documents\c\huffmancoding\huffmancoding\filemanager.c
+	"FileManager.h"
+
+1607273151 d:\documents\c\huffmancoding\huffmancoding\filemanager.h
+	"BinaryManager.h"
+	"global.h"
+
+1607277156 source:d:\documents\c\huffmancoding\huffmancoding\main.c
+	"global.h"
+	"BinaryManager.h"
+	"FileManager.h"
+	"OccurencesManager.h"
+
+1607276649 d:\documents\c\huffmancoding\huffmancoding\occurencesmanager.h
+	"global.h"
+
+1607276649 source:d:\documents\c\huffmancoding\huffmancoding\occurencesmanager.c
+	"OccurencesManager.h"
+
+1607288123 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\binarymanager.c
+	"BinaryManager.h"
+
+1607288123 c:\users\vince\documents\github\huffmancoding\huffmancoding\binarymanager.h
+	"global.h"
+
+1607288123 c:\users\vince\documents\github\huffmancoding\huffmancoding\global.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1607288123 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\filemanager.c
+	"FileManager.h"
+
+1607288123 c:\users\vince\documents\github\huffmancoding\huffmancoding\filemanager.h
+	"BinaryManager.h"
+	"global.h"
+
+1607288704 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\main.c
+	"global.h"
+	"BinaryManager.h"
+	"FileManager.h"
+	"OccurrencesManager.h"
+
+1607288542 c:\users\vince\documents\github\huffmancoding\huffmancoding\occurrencesmanager.h
+	"global.h"
+
+1607289261 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\occurrencesmanager.c
+	"OccurrencesManager.h"
+
