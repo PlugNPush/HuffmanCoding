@@ -92,8 +92,23 @@ Occurrences* getOccurrences(char* texte) {
             (*tmp)->noeud->poids = 1;
             (*tmp)->next = NULL;
         }
-
-        // Parcourir, condition d'arrêt \0, vérif char == [i] à chaque iter, sinon ->next malloc
     }
     return occ;
+}
+
+void crea_noeud(OccurrencesList* ocl){
+    if(ocl){
+        Occurrences** tmp = ocl->list;
+        Occurrences* new_occ = malloc(sizeof(Occurrences));
+        new_occ->noeud = malloc(sizeof(Arbre));
+        Occurrences* min1 = removeMin(ocl);
+        new_occ->noeud->left = min1->noeud;
+        Occurrences* min2 = removeMin(ocl);
+        new_occ->noeud->right = min2->noeud;
+        new_occ->noeud->poids = min1->noeud->poids + min2->noeud->poids;
+        while (*tmp != NULL){
+            *tmp = (*tmp)->next;
+        }
+        *tmp = new_occ;
+    }
 }

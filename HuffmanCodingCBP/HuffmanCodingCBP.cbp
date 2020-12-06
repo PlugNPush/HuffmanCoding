@@ -39,16 +39,19 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../HuffmanCoding/FileManager.h" />
-		<Unit filename="../HuffmanCoding/OccurencesManager.c">
+		<Unit filename="../HuffmanCoding/OccurrencesManager.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../HuffmanCoding/OccurencesManager.h" />
+		<Unit filename="../HuffmanCoding/OccurrencesManager.h" />
 		<Unit filename="../HuffmanCoding/global.h" />
 		<Unit filename="../HuffmanCoding/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
+			<code_completion />
+			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
