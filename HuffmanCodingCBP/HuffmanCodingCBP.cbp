@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../HuffmanCoding/FileManager.h" />
+		<Unit filename="../HuffmanCoding/OccurencesManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../HuffmanCoding/OccurencesManager.h" />
 		<Unit filename="../HuffmanCoding/global.h" />
 		<Unit filename="../HuffmanCoding/main.c">
 			<Option compilerVar="CC" />
