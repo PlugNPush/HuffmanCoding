@@ -27,13 +27,13 @@ int main(int argc, const char * argv[]) {
     OccurrencesList* ocl;
     ocl = malloc(sizeof(OccurrencesList));
     ocl->list = getOccurrences(bin);
-    
+
     printf("%s\n", bin);
-    
+
     Occurrences* occ = ocl->list;
-    
+
     while (occ != NULL) {
-        printf("%c %d\n", occ->letter, occ->count);
+        printf("%c %d\n", occ->noeud->letter, occ->noeud->poids);
         occ = occ->next;
     }
 

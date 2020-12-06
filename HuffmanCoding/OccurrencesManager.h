@@ -10,22 +10,21 @@
 
 #include "global.h"
 
-typedef struct Occurrences {
-    char letter;
-    int count;
-    struct Occurrences* next;
-} Occurrences;
-
-typedef struct OccurrencesList {
-    Occurrences *list;
-} OccurrencesList;
-
 typedef struct Arbre {
     struct Arbre* left;
     struct Arbre* right;
     int poids;
     char letter;
 } Arbre;
+
+typedef struct Occurrences {
+    struct Arbre* noeud;
+    struct Occurrences* next;
+} Occurrences;
+
+typedef struct OccurrencesList {
+    Occurrences *list;
+} OccurrencesList;
 
 Occurrences* getOccurrences(char* texte);
 void removeAt(int it, OccurrencesList* forList);

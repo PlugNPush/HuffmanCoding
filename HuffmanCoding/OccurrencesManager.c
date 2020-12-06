@@ -9,7 +9,7 @@
 
 void removeAt(int it, OccurrencesList* forList) {
     int i = 0;
-    
+
     if (it <= 0) {
         forList->list = forList->list->next;
     } else {
@@ -30,13 +30,13 @@ void removeAt(int it, OccurrencesList* forList) {
 
 int minpos(OccurrencesList* listHost) {
     int minpos = 0;
-    int min = listHost->list->count;
+    int min = listHost->list->noeud->poids;
     Occurrences *tmp = listHost->list;
-    
+
     int i = 0;
     while ((tmp) != NULL) {
-        if ((tmp)->count < min) {
-            min = (tmp)->count;
+        if ((tmp)->noeud->poids < min) {
+            min = (tmp)->noeud->poids;
             minpos = i;
         }
         (tmp) = (tmp)->next;
@@ -56,42 +56,42 @@ Occurrences* removeMin(OccurrencesList* listHost) {
     Occurrences* ret = tmp;
     removeAt(min, listHost);
     return ret;
-    
+
 }
 
 Occurrences* getOccurrences(char* texte) {
     Occurrences* occ = malloc(sizeof(Occurrences));
-    
+
     if (texte[0] != '\0') {
-        occ->count = 1;
-        occ->letter = texte[0];
+        occ->noeud->poids = 1;
+        occ->noeud->letter = texte[0];
         occ->next = NULL;
     } else {
         return occ;
     }
-    
+
     int i = 1;
     for (i = 1; texte[i] != '\0'; i++) {
         Occurrences **tmp = &occ;
         int placed = 0;
-        
+
         // texte[i] -> contient le caractère.
-        
+
         while ((*tmp) != NULL && placed != 1) {
-            if (texte[i] == (*tmp)->letter) {
-                (*tmp)->count++;
+            if (texte[i] == (*tmp)->noeud->letter) {
+                (*tmp)->noeud->poids++;
                 placed = 1;
             }
             tmp = &(*tmp)->next;
         }
-        
+
         if (placed != 1) {
             (*tmp) = malloc(sizeof(Occurrences));
-            (*tmp)->letter = texte[i];
-            (*tmp)->count = 1;
+            (*tmp)->noeud->letter = texte[i];
+            (*tmp)->noeud->poids = 1;
             (*tmp)->next = NULL;
         }
-        
+
         // Parcourir, condition d'arrêt \0, vérif char == [i] à chaque iter, sinon ->next malloc
     }
     return occ;
