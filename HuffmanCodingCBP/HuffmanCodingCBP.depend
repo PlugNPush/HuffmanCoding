@@ -22,3 +22,26 @@
 	"BinaryManager.h"
 	"FileManager.h"
 
+1607273726 source:c:\users\marti\documents\github\huffmancoding\huffmancoding\binarymanager.c
+	"BinaryManager.h"
+
+1607273726 c:\users\marti\documents\github\huffmancoding\huffmancoding\binarymanager.h
+	"global.h"
+
+1607273726 c:\users\marti\documents\github\huffmancoding\huffmancoding\global.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1607273726 source:c:\users\marti\documents\github\huffmancoding\huffmancoding\filemanager.c
+	"FileManager.h"
+
+1607273726 c:\users\marti\documents\github\huffmancoding\huffmancoding\filemanager.h
+	"BinaryManager.h"
+	"global.h"
+
+1607273910 source:c:\users\marti\documents\github\huffmancoding\huffmancoding\main.c
+	"global.h"
+	"BinaryManager.h"
+	"FileManager.h"
+
