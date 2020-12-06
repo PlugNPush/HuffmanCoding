@@ -61,7 +61,7 @@ Occurrences* removeMin(OccurrencesList* listHost) {
 
 Occurrences* getOccurrences(char* texte) {
     Occurrences* occ = malloc(sizeof(Occurrences));
-
+    occ->noeud = malloc(sizeof(Arbre));
     if (texte[0] != '\0') {
         occ->noeud->poids = 1;
         occ->noeud->letter = texte[0];
@@ -87,6 +87,7 @@ Occurrences* getOccurrences(char* texte) {
 
         if (placed != 1) {
             (*tmp) = malloc(sizeof(Occurrences));
+            (*tmp)->noeud = malloc(sizeof(Arbre));
             (*tmp)->noeud->letter = texte[i];
             (*tmp)->noeud->poids = 1;
             (*tmp)->next = NULL;
