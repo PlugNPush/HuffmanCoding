@@ -8,6 +8,7 @@
 #include "global.h"
 #include "BinaryManager.h"
 #include "FileManager.h"
+#include "OccurencesManager.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -22,6 +23,8 @@ int main(int argc, const char * argv[]) {
     save_output("Output.txt", bin);
     
     printf("Alice.txt : %d caractères\nOutput.txt : %d caractères\n", calculate_size("Alice.txt"), calculate_size("Output.txt"));
+    
+    Occurences* occ = getOccurences(bin);
     
     printf("%s\n", bin);
     
