@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="HuffmanCoding" />
+		<Option title="HuffmanCodingCBP" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/HuffmanCoding" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/HuffmanCodingCBP" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/HuffmanCoding" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/HuffmanCodingCBP" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -31,16 +31,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="BinaryManager.c">
+		<Unit filename="../HuffmanCoding/BinaryManager.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="BinaryManager.h" />
-		<Unit filename="FileManager.c">
+		<Unit filename="../HuffmanCoding/BinaryManager.h" />
+		<Unit filename="../HuffmanCoding/FileManager.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="FileManager.h" />
-		<Unit filename="global.h" />
-		<Unit filename="main.c">
+		<Unit filename="../HuffmanCoding/FileManager.h" />
+		<Unit filename="../HuffmanCoding/global.h" />
+		<Unit filename="../HuffmanCoding/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
