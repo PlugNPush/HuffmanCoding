@@ -25,13 +25,13 @@ int main(int argc, const char * argv[]) {
     printf("Alice.txt : %d caractères\nOutput.txt : %d caractères\n", calculate_size("Alice.txt"), calculate_size("Output.txt"));
 
     Occurences* occ = getOccurences(bin);
+    
+    printf("%s\n", bin);
 
-    while (occ->next != NULL) {
+    while (occ != NULL) {
         printf("%c %d\n", occ->letter, occ->count);
         occ = occ->next;
     }
-
-    printf("%s\n", bin);
 
 
     return 0;
