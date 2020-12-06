@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ED5EEC472550832B008D560E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED5EEC462550832B008D560E /* main.c */; };
+		EDD6FEF6257D1C5A0089082E /* BinaryManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FEF5257D1C5A0089082E /* BinaryManager.c */; };
+		EDD6FEFD257D25A00089082E /* FileManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FEFC257D25A00089082E /* FileManager.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		ED5EEC432550832B008D560E /* HuffmanCoding */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HuffmanCoding; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5EEC462550832B008D560E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EDD6FEF4257D1C5A0089082E /* BinaryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryManager.h; sourceTree = "<group>"; };
+		EDD6FEF5257D1C5A0089082E /* BinaryManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BinaryManager.c; sourceTree = "<group>"; };
+		EDD6FEF8257D1C830089082E /* global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		EDD6FEFB257D25A00089082E /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		EDD6FEFC257D25A00089082E /* FileManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileManager.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				ED5EEC462550832B008D560E /* main.c */,
+				EDD6FEF4257D1C5A0089082E /* BinaryManager.h */,
+				EDD6FEF5257D1C5A0089082E /* BinaryManager.c */,
+				EDD6FEF8257D1C830089082E /* global.h */,
+				EDD6FEFB257D25A00089082E /* FileManager.h */,
+				EDD6FEFC257D25A00089082E /* FileManager.c */,
 			);
 			path = HuffmanCoding;
 			sourceTree = "<group>";
@@ -88,7 +100,7 @@
 		ED5EEC3B2550832B008D560E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					ED5EEC422550832B008D560E = {
 						CreatedOnToolsVersion = 12.1;
@@ -118,7 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD6FEF6257D1C5A0089082E /* BinaryManager.c in Sources */,
 				ED5EEC472550832B008D560E /* main.c in Sources */,
+				EDD6FEFD257D25A00089082E /* FileManager.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +253,7 @@
 		ED5EEC4B2550832B008D560E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZL9396WK65;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -249,6 +264,7 @@
 		ED5EEC4C2550832B008D560E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZL9396WK65;
 				ENABLE_HARDENED_RUNTIME = YES;
