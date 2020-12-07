@@ -11,9 +11,7 @@ char* get_dico(char character) {
     FILE *Dico = fopen("Dico.txt", "r");
 
     if (Dico == NULL) {
-        perror("Impossible de charger la base de donnees!\n");
-        fclose(Dico);
-        return;
+        exit(EXIT_FAILURE);
     }
 
     char* chaine = (char*)malloc(sizeof(char)*10);
