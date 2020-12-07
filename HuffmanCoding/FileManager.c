@@ -9,7 +9,7 @@
 #include "Encoder.h"
 
 
-void save_output(char* location, char* texte) {
+void save_output(char* dico_location, char* location, char* texte) {
 
     printf("Enregistrement a l'emplacement: %s\n", location);
     FILE *output = fopen(location, "w");
@@ -25,7 +25,7 @@ void save_output(char* location, char* texte) {
     }
 
     while (texte[i] != '\0') {
-        fprintf(output, "%s", get_dico(texte[i])); //Changer de fonction pour avoir le passage en binaire : get_binary()
+        fprintf(output, "%s", get_dico(dico_location, texte[i])); //Changer de fonction pour avoir le passage en binaire : get_binary()
         i++;
     }
 
@@ -50,6 +50,7 @@ int calculate_size(char* location) {
     return integrity;
 }
 
+
 void load_binary(char* location, char **binaire) {
     printf("Chargement depuis l'emplacement: %s\n", location);
     FILE *Text = fopen(location, "r");
@@ -60,7 +61,6 @@ void load_binary(char* location, char **binaire) {
 
     int size = calculate_size(location);
     *binaire = (char*) malloc(sizeof(char)*size);
-    fscanf(Text, "%[^\n]\n", *binaire);
-
+    fscanf(Text, "%[^\0]", *binaire);
     fclose(Text);
 }

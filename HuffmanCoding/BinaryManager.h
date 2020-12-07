@@ -10,6 +10,6 @@
 
 #include "global.h"
 
-char *get_binary(char character);
+char *get_binary(char character); //Renvoie la chaine binaire correspondant au caractère en fonction de la table ASCII
 
 #endif /* BinaryManager_h */

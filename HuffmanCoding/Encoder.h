@@ -3,7 +3,8 @@
 
 #include "global.h"
 
-char *get_dico(char character);
+
+char* get_dico(char* location, char character); //Renvoie la chaine binaire correspondant au caractère en fonction du dictionnaire
 
 
 #endif // ENCODER_H_INCLUDED

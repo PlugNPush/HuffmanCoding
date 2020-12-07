@@ -21,7 +21,8 @@ int main(int argc, const char * argv[]) {
 
     char* bin;
     load_binary("Tasses.txt", &bin);
-    save_output("Output.txt", bin);
+    printf("%s\n", bin);
+    save_output("Dico.txt", "Output.txt", bin);
 
     printf("Tasses.txt : %d caractères\nOutput.txt : %d caractères\n", calculate_size("Tasses.txt"), calculate_size("Output.txt"));
 
@@ -40,10 +41,10 @@ int main(int argc, const char * argv[]) {
 
 
 
-    char * character = get_dico('T');
-    char * character1 = get_dico('A');
-    char * character2 = get_dico('S');
-    char * character3 = get_dico('E');
+    char * character = get_dico("Dico.txt", 'T');
+    char * character1 = get_dico("Dico.txt", 'A');
+    char * character2 = get_dico("Dico.txt", 'S');
+    char * character3 = get_dico("Dico.txt", 'E');
 
 
     printf("Chaine du dico de T: %s\n\n", character);

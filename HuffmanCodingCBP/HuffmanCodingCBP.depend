@@ -2,7 +2,7 @@
 1607273151 source:d:\documents\c\huffmancoding\huffmancoding\binarymanager.c
 	"BinaryManager.h"
 
-1607273151 d:\documents\c\huffmancoding\huffmancoding\binarymanager.h
+1607302983 d:\documents\c\huffmancoding\huffmancoding\binarymanager.h
 	"global.h"
 
 1607273151 d:\documents\c\huffmancoding\huffmancoding\global.h
@@ -10,18 +10,20 @@
 	<stdlib.h>
 	<string.h>
 
-1607300148 source:d:\documents\c\huffmancoding\huffmancoding\filemanager.c
+1607308123 source:d:\documents\c\huffmancoding\huffmancoding\filemanager.c
 	"FileManager.h"
+	"Encoder.h"
 
-1607298762 d:\documents\c\huffmancoding\huffmancoding\filemanager.h
+1607303966 d:\documents\c\huffmancoding\huffmancoding\filemanager.h
 	"BinaryManager.h"
 	"global.h"
 
-1607297349 source:d:\documents\c\huffmancoding\huffmancoding\main.c
+1607306607 source:d:\documents\c\huffmancoding\huffmancoding\main.c
 	"global.h"
 	"BinaryManager.h"
 	"FileManager.h"
 	"OccurrencesManager.h"
+	"Encoder.h"
 
 1607276649 d:\documents\c\huffmancoding\huffmancoding\occurencesmanager.h
 	"global.h"
@@ -29,13 +31,13 @@
 1607276649 source:d:\documents\c\huffmancoding\huffmancoding\occurencesmanager.c
 	"OccurencesManager.h"
 
-1607298519 source:d:\documents\c\huffmancoding\huffmancoding\encoder.c
+1607308088 source:d:\documents\c\huffmancoding\huffmancoding\encoder.c
 	<stdlib.h>
 	<stdio.h>
 	"Encoder.h"
 	"FileManager.h"
 
-1607290699 d:\documents\c\huffmancoding\huffmancoding\encoder.h
+1607303358 d:\documents\c\huffmancoding\huffmancoding\encoder.h
 	"global.h"
 
 1607288211 source:d:\documents\c\huffmancoding\huffmancoding\occurrencesmanager.c
