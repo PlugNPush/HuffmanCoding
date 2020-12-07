@@ -34,7 +34,7 @@ char *get_binary(char character) {
 }
 
 Dico* import_dico(char* location) {
-    
+
     FILE *dico = fopen(location, "r");
 
     if (dico == NULL) {
@@ -43,7 +43,7 @@ Dico* import_dico(char* location) {
 
     int* size = malloc(sizeof(int));
     fscanf(dico, "MAX_BITS:%d", size);
-    
+
     Dico* dict = malloc(sizeof(Dico));
     Dico** temp = &dict;
     getc(dico);
@@ -63,7 +63,7 @@ Dico* import_dico(char* location) {
         getc(dico);
     }
     printf("END READ");
-    
+
     return dict;
-    
+
 }
