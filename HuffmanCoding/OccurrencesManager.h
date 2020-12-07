@@ -10,16 +10,6 @@
 
 #include "global.h"
 
-typedef struct Occurrences {
-    char letter;
-    int count;
-    struct Occurrences* next;
-} Occurrences;
-
-typedef struct OccurrencesList {
-    Occurrences *list;
-} OccurrencesList;
-
 typedef struct Arbre {
     struct Arbre* left;
     struct Arbre* right;
@@ -27,10 +17,20 @@ typedef struct Arbre {
     char letter;
 } Arbre;
 
+typedef struct Occurrences {
+    struct Arbre* noeud;
+    struct Occurrences* next;
+} Occurrences;
+
+typedef struct OccurrencesList {
+    Occurrences *list;
+} OccurrencesList;
+
 Occurrences* getOccurrences(char* texte);
 void removeAt(int it, OccurrencesList* forList);
 Occurrences* removeMin(OccurrencesList* listHost);
 void removeAt(int it, OccurrencesList* forList);
 int minpos(OccurrencesList* listHost);
+void crea_noeud(OccurrencesList* ocl);
 
 #endif /* OccurrencesManager_h */

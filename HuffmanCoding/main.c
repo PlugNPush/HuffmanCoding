@@ -11,6 +11,7 @@
 #include "OccurrencesManager.h"
 #include <unistd.h>
 
+
 int main(int argc, const char * argv[]) {
 
     printf("RAW Value of A : %d\n", 'A');
@@ -32,9 +33,17 @@ int main(int argc, const char * argv[]) {
     Occurrences* occ = ocl->list;
 
     while (occ != NULL) {
-        printf("%c %d\n", occ->letter, occ->count);
+        printf("%c %d\n", occ->noeud->letter, occ->noeud->poids);
         occ = occ->next;
     }
+
+    while (ocl->list->next != NULL) {
+        crea_noeud(ocl);
+        printf("ITERATION\n");
+    }
+
+    char* numero = malloc(sizeof(char)*(depth(ocl->list->noeud)-1));
+    export_dico("Dico.txt", ocl->list->noeud, numero);
     
     Dico* dico = import_dico("Dico.txt");
     

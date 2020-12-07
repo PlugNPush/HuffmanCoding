@@ -10,7 +10,14 @@
 
 #include "BinaryManager.h"
 #include "global.h"
+#include "OccurrencesManager.h"
 
+void load_binary(char* location, char **binaire);
+int calculate_size(char* location);
+void save_output(char* location, char* texte);
+int depth(Arbre* tree);
+void export_dico(char* location, Arbre* noeud,char* val);
+void create_dico(FILE *output, Arbre* noeud, char* val);
 void load_binary(char* location, char **binaire); //Recupere un texte depuis un fichier
 int calculate_size(char* location); //Renvoie le nombre de caracteres d'un ficher
 void save_output(char* dico_location, char* compressedLocation, char* asciiLocation, char* texte); //Creer le ficher compresse

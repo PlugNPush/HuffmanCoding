@@ -21,6 +21,10 @@ void save_output(char* dico_location, char* compressedLocation, char* asciiLocat
 
     int i = 0;
 
+    if (texte == NULL) {
+        exit(EXIT_FAILURE);
+    }
+
     while (texte[i] != '\0') {
         fprintf(output, "%s", get_dico(dico_location, texte[i]));
         fprintf(asciiOutput, "%s", get_binary(texte[i]));
@@ -87,4 +91,49 @@ char* get_dico(char* location, char character) {
     fscanf(dico, "%[^\n]\n", chaine);
     fclose(dico);
     return chaine;
+}
+
+int depth(Arbre* tree){
+    if(tree == NULL){
+        return 0;
+    }
+    else{
+        int left_depth = depth(tree->left);
+        int right_depth = depth(tree->right);
+        if (left_depth > right_depth){
+            return 1 + left_depth;
+        }
+        else{
+            return 1 + right_depth;
+        }
+    }
+}
+
+void create_dico(FILE *output, Arbre* noeud, char* val) {
+    if (noeud != NULL){
+        if (noeud->letter != '\0') {
+            fprintf(output, "%c:%s\n",noeud->letter,val);
+        }
+        char* x = malloc(sizeof(depth(noeud)));
+        char* y = malloc(sizeof(depth(noeud)));
+        strcpy(x, val);
+        strcpy(y, val);
+        create_dico(output, noeud->left, strcat(x, "0"));
+        create_dico(output, noeud->right, strcat(y, "1"));
+    }
+}
+
+void export_dico(char* location, Arbre* noeud,char* val){
+    printf("Enregistrement a l'emplacement: %s\n", location);
+    FILE *output = fopen(location, "wa");
+    
+    if (output == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    
+    fprintf(output, "MAX_BITS:%d\n", depth(noeud));
+    
+    create_dico(output, noeud, val);
+    
+    fclose(output);
 }
