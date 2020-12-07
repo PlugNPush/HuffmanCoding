@@ -8,24 +8,28 @@
 char* get_dico(char* location, char character) {
 
     printf("Chargement depuis l'emplacement: %s\n", location);
-    FILE *Dico = fopen(location, "r");
+    FILE *dico = fopen(location, "r");
 
-    if (Dico == NULL) {
+    if (dico == NULL) {
         exit(EXIT_FAILURE);
     }
 
-    char* chaine = (char*)malloc(sizeof(char)*10); //modifier plus tard
+    int* size;
+    fscanf(dico, "MAX_BITS:%d\n", &size);
+    printf("%d", size);
 
-    while (fgetc(Dico) != character) { //Pour aller au caractere voulu
+    char* chaine = (char*)malloc(sizeof(char)*(*size)); //modifier plus tard
+
+    while (fgetc(dico) != character) { //Pour aller au caractere voulu
     }
 
-    if (fgetc(Dico) != ':') { //Pour les deux points et le retour a la ligne
-        fgetc(Dico);
+    if (fgetc(dico) != ':') { //Pour les deux points et le retour a la ligne
+        fgetc(dico);
     }
 
-    fscanf(Dico, "%[^\n]\n", chaine);
-
-
-    fclose(Dico);
+    fscanf(dico, "%[^\n]\n", chaine);
+    fclose(dico);
     return chaine;
 }
+
+
