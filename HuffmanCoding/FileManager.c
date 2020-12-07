@@ -71,9 +71,7 @@ void load_binary(char* location, char **binaire) {
     FILE *Text = fopen(location, "r");
 
     if (Text == NULL) {
-        perror("Impossible de charger la base de donnees!\n");
-        fclose(Text);
-        return;
+        exit(EXIT_FAILURE);
     }
 
     int size = calculate_size(location);
