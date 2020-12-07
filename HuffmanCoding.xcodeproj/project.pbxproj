@@ -10,6 +10,7 @@
 		ED5EEC472550832B008D560E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED5EEC462550832B008D560E /* main.c */; };
 		EDD6FEF6257D1C5A0089082E /* BinaryManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FEF5257D1C5A0089082E /* BinaryManager.c */; };
 		EDD6FEFD257D25A00089082E /* FileManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FEFC257D25A00089082E /* FileManager.c */; };
+		EDD6FF01257D42260089082E /* OccurrencesManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FF00257D42260089082E /* OccurrencesManager.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		EDD6FEF8257D1C830089082E /* global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
 		EDD6FEFB257D25A00089082E /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		EDD6FEFC257D25A00089082E /* FileManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileManager.c; sourceTree = "<group>"; };
+		EDD6FEFF257D42260089082E /* OccurrencesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OccurrencesManager.h; sourceTree = "<group>"; };
+		EDD6FF00257D42260089082E /* OccurrencesManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = OccurrencesManager.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				EDD6FEF8257D1C830089082E /* global.h */,
 				EDD6FEFB257D25A00089082E /* FileManager.h */,
 				EDD6FEFC257D25A00089082E /* FileManager.c */,
+				EDD6FEFF257D42260089082E /* OccurrencesManager.h */,
+				EDD6FF00257D42260089082E /* OccurrencesManager.c */,
 			);
 			path = HuffmanCoding;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD6FEF6257D1C5A0089082E /* BinaryManager.c in Sources */,
+				EDD6FF01257D42260089082E /* OccurrencesManager.c in Sources */,
 				ED5EEC472550832B008D560E /* main.c in Sources */,
 				EDD6FEFD257D25A00089082E /* FileManager.c in Sources */,
 			);

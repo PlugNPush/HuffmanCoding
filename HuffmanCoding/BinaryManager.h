@@ -10,6 +10,13 @@
 
 #include "global.h"
 
-char *get_binary(char character);
+typedef struct Dico {
+    char* code;
+    char letter;
+    struct Dico* next;
+}Dico;
+
+char *get_binary(char character); //Renvoie la chaine binaire correspondant au caractère en fonction de la table ASCII
+Dico* import_dico(char* location);
 
 #endif /* BinaryManager_h */
