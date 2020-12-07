@@ -11,6 +11,7 @@
 #include "BinaryManager.h"
 #include "global.h"
 
+int lire_ligne(char **une_ligne, FILE *fichier);
 void load_binary(char* location, char **binaire);
 int calculate_size(char* location);
 void save_output(char* location, char* texte);

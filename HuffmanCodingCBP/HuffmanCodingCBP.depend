@@ -10,22 +10,37 @@
 	<stdlib.h>
 	<string.h>
 
-1607273151 source:d:\documents\c\huffmancoding\huffmancoding\filemanager.c
+1607299011 source:d:\documents\c\huffmancoding\huffmancoding\filemanager.c
 	"FileManager.h"
 
-1607273151 d:\documents\c\huffmancoding\huffmancoding\filemanager.h
+1607298762 d:\documents\c\huffmancoding\huffmancoding\filemanager.h
 	"BinaryManager.h"
 	"global.h"
 
-1607277156 source:d:\documents\c\huffmancoding\huffmancoding\main.c
+1607297349 source:d:\documents\c\huffmancoding\huffmancoding\main.c
 	"global.h"
 	"BinaryManager.h"
 	"FileManager.h"
-	"OccurencesManager.h"
+	"OccurrencesManager.h"
 
 1607276649 d:\documents\c\huffmancoding\huffmancoding\occurencesmanager.h
 	"global.h"
 
 1607276649 source:d:\documents\c\huffmancoding\huffmancoding\occurencesmanager.c
 	"OccurencesManager.h"
+
+1607298519 source:d:\documents\c\huffmancoding\huffmancoding\encoder.c
+	<stdlib.h>
+	<stdio.h>
+	"Encoder.h"
+	"FileManager.h"
+
+1607290699 d:\documents\c\huffmancoding\huffmancoding\encoder.h
+	"global.h"
+
+1607288211 source:d:\documents\c\huffmancoding\huffmancoding\occurrencesmanager.c
+	"OccurrencesManager.h"
+
+1607288211 d:\documents\c\huffmancoding\huffmancoding\occurrencesmanager.h
+	"global.h"
 
