@@ -10,6 +10,7 @@
 #include "FileManager.h"
 #include "OccurrencesManager.h"
 
+
 int main(int argc, const char * argv[]) {
 
     printf("RAW Value of A : %d\n", 'A');
@@ -31,17 +32,19 @@ int main(int argc, const char * argv[]) {
     printf("%s\n", bin);
 
     Occurrences* occ = ocl->list;
-    
+
     while (occ != NULL) {
         printf("%c %d\n", occ->noeud->letter, occ->noeud->poids);
         occ = occ->next;
     }
-    
+
     while (ocl->list->next != NULL) {
         crea_noeud(ocl);
         printf("ITERATION\n");
     }
 
+    char* numero = malloc(sizeof(char)*(depth(ocl->list->noeud)-1));
+    lire_arbre(ocl->list->noeud, numero);
 
     return 0;
 }

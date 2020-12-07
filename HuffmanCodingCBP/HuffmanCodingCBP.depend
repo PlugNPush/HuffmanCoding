@@ -40,12 +40,13 @@
 	<stdlib.h>
 	<string.h>
 
-1607289641 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\filemanager.c
+1607302743 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\filemanager.c
 	"FileManager.h"
 
-1607289641 c:\users\vince\documents\github\huffmancoding\huffmancoding\filemanager.h
+1607302758 c:\users\vince\documents\github\huffmancoding\huffmancoding\filemanager.h
 	"BinaryManager.h"
 	"global.h"
+	"OccurrencesManager.h"
 
 1607289641 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\main.c
 	"global.h"
@@ -53,9 +54,9 @@
 	"FileManager.h"
 	"OccurrencesManager.h"
 
-1607289641 c:\users\vince\documents\github\huffmancoding\huffmancoding\occurrencesmanager.h
+1607301684 c:\users\vince\documents\github\huffmancoding\huffmancoding\occurrencesmanager.h
 	"global.h"
 
-1607289261 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\occurrencesmanager.c
+1607301787 source:c:\users\vince\documents\github\huffmancoding\huffmancoding\occurrencesmanager.c
 	"OccurrencesManager.h"
 
