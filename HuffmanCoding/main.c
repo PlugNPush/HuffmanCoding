@@ -44,7 +44,7 @@ int main(int argc, const char * argv[]) {
     }
 
     char* numero = malloc(sizeof(char)*(depth(ocl->list->noeud)-1));
-    lire_arbre(ocl->list->noeud, numero);
+    export_dico("Dico.txt", ocl->list->noeud, numero);
 
     return 0;
 }

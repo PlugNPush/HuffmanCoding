@@ -16,6 +16,7 @@ void load_binary(char* location, char **binaire);
 int calculate_size(char* location);
 void save_output(char* location, char* texte);
 int depth(Arbre* tree);
-void lire_arbre(Arbre* noeud,char* val);
+void export_dico(char* location, Arbre* noeud,char* val);
+void create_dico(FILE *output, Arbre* noeud, char* val);
 
 #endif /* FileManager_h */
