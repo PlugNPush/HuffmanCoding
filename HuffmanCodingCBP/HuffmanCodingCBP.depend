@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1607349740 source:d:\documents\c\huffmancoding\huffmancoding\binarymanager.c
+	"BinaryManager.h"
+
+1607349727 d:\documents\c\huffmancoding\huffmancoding\binarymanager.h
+	"global.h"
+
+1607349727 d:\documents\c\huffmancoding\huffmancoding\global.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1607349740 source:d:\documents\c\huffmancoding\huffmancoding\filemanager.c
+	"FileManager.h"
+
+1607349740 d:\documents\c\huffmancoding\huffmancoding\filemanager.h
+	"BinaryManager.h"
+	"global.h"
+	"OccurrencesManager.h"
+
+1607349727 d:\documents\c\huffmancoding\huffmancoding\occurrencesmanager.h
+	"global.h"
+
+1607349740 source:d:\documents\c\huffmancoding\huffmancoding\main.c
+	"global.h"
+	"BinaryManager.h"
+	"FileManager.h"
+	"OccurrencesManager.h"
+	<unistd.h>
+
+1607349727 source:d:\documents\c\huffmancoding\huffmancoding\occurrencesmanager.c
+	"OccurrencesManager.h"
+

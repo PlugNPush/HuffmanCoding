@@ -19,5 +19,7 @@ void load_binary(char* location, char **binaire); //Recupere un texte depuis un 
 int calculate_size(char* location); //Renvoie le nombre de caracteres d'un ficher
 void save_output(char* dico_location, char* compressedLocation, char* asciiLocation, char* texte); //Creer le ficher compresse
 char* get_dico(char* location, char character); //Renvoie la chaine binaire correspondant au caractËre en fonction du dictionnaire
+void decode_dico(char* dicoLocation, char* exportLocation, char* sequence, int max_bits);
+int get_max_bits(char* location);
 
 #endif /* FileManager_h */
