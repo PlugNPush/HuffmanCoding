@@ -98,27 +98,46 @@ Occurrences* getOccurrences(char* texte) {
     return occ;
 }
 
+void tri_list(OccurrencesList** ocl){
+    int i,j;
+    Occurrences** c;
+    Occurrences** ocl2 = &(*ocl)->list;
+    Occurrences** ocl3 = &(*ocl)->list;
+    while((*ocl3) != NULL){ // pour faire l'operation N fois
+        while((*ocl2) != NULL){
+            if ( (*ocl2)->liste->noeud->poids > (*ocl2)->liste->next->noeud->poids ) {
+                c = &(*ocl2)->liste;
+                (*ocl2)->liste = (*ocl2)->liste->next;
+                (*ocl2)->liste->next = *c;
+            }
+            (*ocl2) = (*ocl2)->next;
+        }
+    }
+}
+
 void crea_noeud(OccurrencesList* ocl){
     if(ocl){
         Occurrences* tmp = ocl->list;
         Occurrences* new_occ = malloc(sizeof(Occurrences));
         new_occ->noeud = malloc(sizeof(Arbre));
-        Occurrences* min1 = removeMin(ocl);
+        Occurrences* min1 = removeAt(0, ocl);
         new_occ->noeud->left = min1->noeud;
-        Occurrences* min2 = removeMin(ocl);
+        Occurrences* min2 = removeAt(0, ocl);
         new_occ->noeud->right = min2->noeud;
         new_occ->noeud->poids = min1->noeud->poids + min2->noeud->poids;
         new_occ->noeud->letter = '\0';
-        new_occ->next = NULL;
-        while (tmp->next != NULL){
+        while ((tmp->next != NULL)&&(tmp->next->noeud->poids < new_occ->noeud->poids)){
             tmp = (tmp)->next;
         }
-        
+
         if (ocl->list == NULL) {
+            new_occ->next = NULL;
             ocl->list = new_occ;
         } else {
+            Occurrences** inte = &tmp->next;
             tmp->next = new_occ;
+            new_occ->next = *inte;
         }
-            
+
     }
 }
