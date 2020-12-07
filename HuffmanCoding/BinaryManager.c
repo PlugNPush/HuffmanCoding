@@ -52,7 +52,6 @@ Dico* import_dico(char* location) {
     char* binary = (char*)malloc(sizeof(char) * (*size));
     printf("BEGIN READ\n");
     while (fscanf(dico, "%s\n", binary) != EOF) {
-        printf("%c:%s\n", letter, binary);
         (*temp)->letter = letter;
         (*temp)->code = (char*)malloc(sizeof(char) * (*size));
         strcpy((*temp)->code, binary);
@@ -62,7 +61,7 @@ Dico* import_dico(char* location) {
         letter = getc(dico);
         getc(dico);
     }
-    printf("END READ");
+    printf("END READ\n");
 
     return dict;
 
