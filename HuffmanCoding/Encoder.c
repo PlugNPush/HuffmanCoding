@@ -22,7 +22,8 @@ char* get_dico(char character) {
     }
     fgetc(Dico); //pour les deux points
     //lire_ligne(&chaine, Dico);
-    fscanf(Dico, "^[^_]*_%[^\n]\n", *chaine);
+    fscanf(Dico, "%[^\n]\n", chaine);
+    printf("%s\n", chaine);
 
 
     fclose(Dico);
