@@ -31,10 +31,15 @@ int main(int argc, const char * argv[]) {
     printf("%s\n", bin);
 
     Occurrences* occ = ocl->list;
-
+    
     while (occ != NULL) {
         printf("%c %d\n", occ->noeud->letter, occ->noeud->poids);
         occ = occ->next;
+    }
+    
+    while (ocl->list->next != NULL) {
+        crea_noeud(ocl);
+        printf("ITERATION\n");
     }
 
 

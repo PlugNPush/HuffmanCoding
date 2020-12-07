@@ -16,9 +16,7 @@ void removeAt(int it, OccurrencesList* forList) {
         Occurrences *tmp = (forList->list);
         while ((tmp) != NULL) {
             if (i == it-1) {
-                if (tmp->next == NULL) {
-                    free(tmp);
-                } else {
+                if (tmp->next != NULL) {
                     (tmp)->next = (tmp)->next->next;
                 }
             }
@@ -65,6 +63,8 @@ Occurrences* getOccurrences(char* texte) {
     if (texte[0] != '\0') {
         occ->noeud->poids = 1;
         occ->noeud->letter = texte[0];
+        occ->noeud->left = NULL;
+        occ->noeud->right = NULL;
         occ->next = NULL;
     } else {
         return occ;
@@ -88,6 +88,8 @@ Occurrences* getOccurrences(char* texte) {
         if (placed != 1) {
             (*tmp) = malloc(sizeof(Occurrences));
             (*tmp)->noeud = malloc(sizeof(Arbre));
+            (*tmp)->noeud->left = NULL;
+            (*tmp)->noeud->right = NULL;
             (*tmp)->noeud->letter = texte[i];
             (*tmp)->noeud->poids = 1;
             (*tmp)->next = NULL;
@@ -98,7 +100,7 @@ Occurrences* getOccurrences(char* texte) {
 
 void crea_noeud(OccurrencesList* ocl){
     if(ocl){
-        Occurrences** tmp = ocl->list;
+        Occurrences* tmp = ocl->list;
         Occurrences* new_occ = malloc(sizeof(Occurrences));
         new_occ->noeud = malloc(sizeof(Arbre));
         Occurrences* min1 = removeMin(ocl);
@@ -106,9 +108,17 @@ void crea_noeud(OccurrencesList* ocl){
         Occurrences* min2 = removeMin(ocl);
         new_occ->noeud->right = min2->noeud;
         new_occ->noeud->poids = min1->noeud->poids + min2->noeud->poids;
-        while (*tmp != NULL){
-            *tmp = (*tmp)->next;
+        new_occ->noeud->letter = '\0';
+        new_occ->next = NULL;
+        while (tmp->next != NULL){
+            tmp = (tmp)->next;
         }
-        *tmp = new_occ;
+        
+        if (ocl->list == NULL) {
+            ocl->list = new_occ;
+        } else {
+            tmp->next = new_occ;
+        }
+            
     }
 }

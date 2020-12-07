@@ -31,5 +31,6 @@ void removeAt(int it, OccurrencesList* forList);
 Occurrences* removeMin(OccurrencesList* listHost);
 void removeAt(int it, OccurrencesList* forList);
 int minpos(OccurrencesList* listHost);
+void crea_noeud(OccurrencesList* ocl);
 
 #endif /* OccurrencesManager_h */
