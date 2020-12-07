@@ -9,6 +9,7 @@
 #include "BinaryManager.h"
 #include "FileManager.h"
 #include "OccurrencesManager.h"
+#include "Encoder.h"
 
 int main(int argc, const char * argv[]) {
 

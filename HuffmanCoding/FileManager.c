@@ -6,7 +6,7 @@
 //
 
 #include "FileManager.h"
-
+#include "Encoder.h"
 
 
 void save_output(char* location, char* texte) {
