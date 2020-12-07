@@ -9,7 +9,7 @@
 #include "BinaryManager.h"
 #include "FileManager.h"
 #include "OccurrencesManager.h"
-#include "Encoder.h"
+#include <unistd.h>
 
 int main(int argc, const char * argv[]) {
 
@@ -20,11 +20,7 @@ int main(int argc, const char * argv[]) {
     printf("\n\n");
 
     char* bin;
-    load_binary("Tasses.txt", &bin);
-    printf("%s\n", bin);
-    save_output("Dico.txt", "Output.txt", bin);
-
-    printf("Tasses.txt : %d caractères\nOutput.txt : %d caractères\n", calculate_size("Tasses.txt"), calculate_size("Output.txt"));
+    load_binary("Alice.txt", &bin);
 
     OccurrencesList* ocl;
     ocl = malloc(sizeof(OccurrencesList));
@@ -38,19 +34,11 @@ int main(int argc, const char * argv[]) {
         printf("%c %d\n", occ->letter, occ->count);
         occ = occ->next;
     }
-
-
-
-    char * character = get_dico("Dico.txt", 'T');
-    char * character1 = get_dico("Dico.txt", 'A');
-    char * character2 = get_dico("Dico.txt", 'S');
-    char * character3 = get_dico("Dico.txt", 'E');
-
-
-    printf("Chaine du dico de T: %s\n\n", character);
-    printf("Chaine du dico de A: %s\n\n", character1);
-    printf("Chaine du dico de S: %s\n\n", character2);
-    printf("Chaine du dico de E: %s\n\n", character3);
+    
+    Dico* dico = import_dico("Dico.txt");
+    
+    printf("Alice.txt : %d caractères\nOutput.txt : %d caractères\nASCIIOutput.txt : %d caractères\n", calculate_size("Alice.txt"), calculate_size("Output.txt"), calculate_size("ASCIIOutput.txt"));
+    save_output("Dico.txt", "Output.txt", "ASCIIOutput.txt", bin);
 
     return 0;
 }

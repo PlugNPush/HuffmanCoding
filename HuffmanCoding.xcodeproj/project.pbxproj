@@ -11,7 +11,6 @@
 		EDD6FEF6257D1C5A0089082E /* BinaryManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FEF5257D1C5A0089082E /* BinaryManager.c */; };
 		EDD6FEFD257D25A00089082E /* FileManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FEFC257D25A00089082E /* FileManager.c */; };
 		EDD6FF01257D42260089082E /* OccurrencesManager.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FF00257D42260089082E /* OccurrencesManager.c */; };
-		EDD6FF10257DAECE0089082E /* Encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = EDD6FF0F257DAECE0089082E /* Encoder.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,8 +35,6 @@
 		EDD6FEFC257D25A00089082E /* FileManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileManager.c; sourceTree = "<group>"; };
 		EDD6FEFF257D42260089082E /* OccurrencesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OccurrencesManager.h; sourceTree = "<group>"; };
 		EDD6FF00257D42260089082E /* OccurrencesManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = OccurrencesManager.c; sourceTree = "<group>"; };
-		EDD6FF0E257DAECD0089082E /* Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
-		EDD6FF0F257DAECE0089082E /* Encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Encoder.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +67,6 @@
 		ED5EEC452550832B008D560E /* HuffmanCoding */ = {
 			isa = PBXGroup;
 			children = (
-				EDD6FF0F257DAECE0089082E /* Encoder.c */,
-				EDD6FF0E257DAECD0089082E /* Encoder.h */,
 				ED5EEC462550832B008D560E /* main.c */,
 				EDD6FEF4257D1C5A0089082E /* BinaryManager.h */,
 				EDD6FEF5257D1C5A0089082E /* BinaryManager.c */,
@@ -144,7 +139,6 @@
 				EDD6FF01257D42260089082E /* OccurrencesManager.c in Sources */,
 				ED5EEC472550832B008D560E /* main.c in Sources */,
 				EDD6FEFD257D25A00089082E /* FileManager.c in Sources */,
-				EDD6FF10257DAECE0089082E /* Encoder.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
