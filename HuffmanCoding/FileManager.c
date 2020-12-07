@@ -67,6 +67,20 @@ void load_binary(char* location, char **binaire) {
     fclose(Text);
 }
 
+int get_max_bits(char* location) {
+    FILE *dico = fopen(location, "r");
+
+    if (dico == NULL) {
+        exit(EXIT_FAILURE);
+    }
+
+    int* size = malloc(sizeof(int));
+    fscanf(dico, "MAX_BITS:%d", size);
+    fclose(dico);
+    
+    return *size;
+}
+
 char* get_dico(char* location, char character) {
 
     FILE *dico = fopen(location, "r");
