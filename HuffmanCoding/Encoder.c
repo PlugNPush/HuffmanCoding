@@ -16,12 +16,11 @@ char* get_dico(char character) {
         return;
     }
 
-    char* chaine = NULL;
+    char* chaine = (char*)malloc(sizeof(char)*10);
 
     while (fgetc(Dico) != character) {
     }
     fgetc(Dico); //pour les deux points
-    //lire_ligne(&chaine, Dico);
     fscanf(Dico, "%[^\n]\n", chaine);
     printf("%s\n", chaine);
 

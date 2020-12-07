@@ -8,22 +8,6 @@
 #include "FileManager.h"
 
 
-int lire_ligne(char **une_ligne, FILE *fichier) {
-    char c;
-    int taille = 0;
-
-    *une_ligne = NULL;
-
-    while ((c = getc(fichier)) != '\n') { //tant qu'on est pas à la fin de la ligne
-        *une_ligne = realloc(*une_ligne, (1 + taille)*sizeof(char));
-        *(*une_ligne + taille) = c;
-        taille++;
-    }
-    *(*une_ligne + taille) = '\0';
-
-    return taille;
-}
-
 
 void save_output(char* location, char* texte) {
 
