@@ -52,10 +52,15 @@ Dico* import_dico(char* location) {
     char* binary = (char*)malloc(sizeof(char) * (*size));
     printf("BEGIN READ\n");
     while (fscanf(dico, "%s\n", binary) != EOF) {
-        (*temp)->letter = letter;
+        (*temp) = malloc(sizeof(Dico));
+        (*temp)->next = NULL;
+        if (letter == '\a') {
+            (*temp)->letter = '\n';
+        } else {
+            (*temp)->letter = letter;
+        }
         (*temp)->code = (char*)malloc(sizeof(char) * (*size));
         strcpy((*temp)->code, binary);
-        (*temp)->next = malloc(sizeof(Dico));
         printf("%c:%s\n", (*temp)->letter, (*temp)->code);
         temp = &(*temp)->next;
         letter = getc(dico);

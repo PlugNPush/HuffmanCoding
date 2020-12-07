@@ -74,6 +74,10 @@ char* get_dico(char* location, char character) {
     if (dico == NULL) {
         exit(EXIT_FAILURE);
     }
+    
+    if (character == '\n') {
+        character = '\a';
+    }
 
     int* size = malloc(sizeof(int));
     fscanf(dico, "MAX_BITS:%d", size);
@@ -112,7 +116,11 @@ int depth(Arbre* tree){
 void create_dico(FILE *output, Arbre* noeud, char* val) {
     if (noeud != NULL){
         if (noeud->letter != '\0') {
-            fprintf(output, "%c:%s\n",noeud->letter,val);
+            if (noeud->letter == '\n') {
+                fprintf(output, "%c:%s\n", '\a', val);
+            } else {
+                fprintf(output, "%c:%s\n",noeud->letter,val);
+            }
         }
         char* x = malloc(sizeof(depth(noeud)));
         char* y = malloc(sizeof(depth(noeud)));
@@ -134,6 +142,58 @@ void export_dico(char* location, Arbre* noeud,char* val){
     fprintf(output, "MAX_BITS:%d\n", depth(noeud));
     
     create_dico(output, noeud, val);
+    
+    fclose(output);
+}
+
+char* appendChar(char* array, char a) {
+    size_t len = strlen(array);
+
+    char* ret = malloc(sizeof(char)*len+2);
+
+    strcpy(ret, array);
+    ret[len] = a;
+    ret[len+1] = '\0';
+
+    return ret;
+}
+
+void decode_dico(char* dicoLocation, char* exportLocation, char* sequence, int max_bits) {
+    
+    Dico* dico = import_dico(dicoLocation);
+    Dico* copy;
+    
+    printf("Enregistrement a l'emplacement: %s\n", exportLocation);
+    FILE *output = fopen(exportLocation, "wa");
+    
+    if (output == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    
+    char iteration = sequence[0];
+    char* check = malloc(sizeof(char)*max_bits);
+    int placed = 0;
+    int i = 0;
+    int j = 1;
+    while (iteration != '\0') {
+        check = appendChar(check, iteration);
+        copy = dico;
+        while (copy != NULL && placed == 0) {
+            if (strcmp(copy->code, check) == 0) {
+                fprintf(output, "%c", copy->letter);
+                placed = 1;
+            }
+            copy = copy->next;
+        }
+        if (placed==1) {
+            i = 0;
+            check[i] = '\0';
+            placed = 0;
+        }
+        iteration = sequence[j];
+        i++;
+        j++;
+    }
     
     fclose(output);
 }
