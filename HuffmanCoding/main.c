@@ -22,7 +22,6 @@ int main(int argc, const char * argv[]) {
 
     char* bin;
     load_binary("Alice.txt", &bin);
-    save_output("Output.txt", bin);
 
     OccurrencesList* ocl;
     ocl = malloc(sizeof(OccurrencesList));
