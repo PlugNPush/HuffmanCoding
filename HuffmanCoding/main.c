@@ -40,17 +40,16 @@ int main(int argc, const char * argv[]) {
         crea_noeud(ocl);
     }
 
-    char* numero = malloc(sizeof(char)*(depth(ocl->list->noeud)-1));
+    char numero[] = "";
     export_dico("Dico.txt", ocl->list->noeud, numero);
+    
+    printf("Alice.txt : %d caractères\nOutput.txt : %d caractères\nASCIIOutput.txt : %d caractères\n", calculate_size("Alice.txt"), calculate_size("Output.txt"), calculate_size("ASCIIOutput.txt"));
+    save_output("Dico.txt", "Output.txt", "ASCIIOutput.txt", bin);
 
     
     char* huffman;
     load_binary("Output.txt", &huffman);
     decode_dico("Dico.txt", "HuffmannDecoded.txt", huffman, get_max_bits("Dico.txt"));
-    
-
-    printf("Alice.txt : %d caractères\nOutput.txt : %d caractères\nASCIIOutput.txt : %d caractères\n", calculate_size("Alice.txt"), calculate_size("Output.txt"), calculate_size("ASCIIOutput.txt"));
-    save_output("Dico.txt", "Output.txt", "ASCIIOutput.txt", bin);
 
     return 0;
 }
