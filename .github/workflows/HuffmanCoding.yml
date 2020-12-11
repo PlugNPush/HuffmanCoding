@@ -28,4 +28,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile
         run: |
-          gcc HuffmanCoding/*.c -o HuffmanCoding
+          gcc HuffmanCoding/*.c -o Huffman
