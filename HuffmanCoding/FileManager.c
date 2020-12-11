@@ -89,7 +89,7 @@ char* get_dico(char* location, char character) {
         exit(EXIT_FAILURE);
     }
     
-    if (character == '\n') {
+    if (character == '\n' || character == '\r') {
         character = '\a';
     }
 
@@ -130,14 +130,14 @@ int depth(Arbre* tree){
 void create_dico(FILE *output, Arbre* noeud, char* val) {
     if (noeud != NULL){
         if (noeud->letter != '\0') {
-            if (noeud->letter == '\n') {
+            if (noeud->letter == '\n' || noeud->letter == '\r') {
                 fprintf(output, "%c:%s\n", '\a', val);
             } else {
                 fprintf(output, "%c:%s\n",noeud->letter,val);
             }
         }
-        char* x = malloc(sizeof(depth(noeud)));
-        char* y = malloc(sizeof(depth(noeud)));
+        char* x = malloc(sizeof(char) * (strlen(val)+1));
+        char* y = malloc(sizeof(char) * (strlen(val)+1));
         strcpy(x, val);
         strcpy(y, val);
         create_dico(output, noeud->left, strcat(x, "0"));
@@ -145,7 +145,7 @@ void create_dico(FILE *output, Arbre* noeud, char* val) {
     }
 }
 
-void export_dico(char* location, Arbre* noeud,char* val){
+void export_dico(char* location, Arbre* noeud, char* val){
     printf("Enregistrement a l'emplacement: %s\n", location);
     FILE *output = fopen(location, "wa");
     

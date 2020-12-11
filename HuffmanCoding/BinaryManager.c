@@ -43,15 +43,17 @@ Dico* import_dico(char* location) {
 
     int* size = malloc(sizeof(int));
     fscanf(dico, "MAX_BITS:%d", size);
+    getc(dico);
 
     Dico* dict = malloc(sizeof(Dico));
     Dico** temp = &dict;
-    getc(dico);
-    char letter = getc(dico);
-    getc(dico);
+    
+    char letter;
     char* binary = (char*)malloc(sizeof(char) * (*size));
-    printf("BEGIN READ\n");
-    while (fscanf(dico, "%s\n", binary) != EOF) {
+    
+    while (fscanf(dico, "%c:%s", &letter, binary) != EOF) {
+        getc(dico);
+        
         (*temp) = malloc(sizeof(Dico));
         (*temp)->next = NULL;
         if (letter == '\a') {
@@ -59,12 +61,10 @@ Dico* import_dico(char* location) {
         } else {
             (*temp)->letter = letter;
         }
-        (*temp)->code = (char*)malloc(sizeof(char) * (*size));
+        (*temp)->code = malloc(sizeof(char) * (*size));
         strcpy((*temp)->code, binary);
         printf("%c:%s\n", (*temp)->letter, (*temp)->code);
         temp = &(*temp)->next;
-        letter = getc(dico);
-        getc(dico);
     }
     printf("END READ\n");
 

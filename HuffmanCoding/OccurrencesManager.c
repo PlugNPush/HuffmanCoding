@@ -76,6 +76,10 @@ Occurrences* getOccurrences(char* texte) {
         int placed = 0;
 
         // texte[i] -> contient le caractère.
+        
+        if (texte[i] == '\r') {
+            texte[i] = '\n';
+        }
 
         while ((*tmp) != NULL && placed != 1) {
             if (texte[i] == (*tmp)->noeud->letter) {
