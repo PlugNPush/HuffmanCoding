@@ -1,0 +1,165 @@
+\hypertarget{_occurrences_manager_8h}{}\doxysection{Huffman\+Coding/\+Occurrences\+Manager.h File Reference}
+\label{_occurrences_manager_8h}\index{HuffmanCoding/OccurrencesManager.h@{HuffmanCoding/OccurrencesManager.h}}
+
+
+Header of the library allowing the management of \mbox{\hyperlink{struct_arbre}{Arbre}}, \mbox{\hyperlink{struct_occurrences}{Occurrences}} and \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}}.  
+
+
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_arbre}{Arbre}}
+\item 
+struct \mbox{\hyperlink{struct_occurrences}{Occurrences}}
+\item 
+struct \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_occurrences_manager_8h_affd1feccdb225997be494bcdb0572fa6}\label{_occurrences_manager_8h_affd1feccdb225997be494bcdb0572fa6}} 
+typedef struct \mbox{\hyperlink{struct_arbre}{Arbre}} \mbox{\hyperlink{_occurrences_manager_8h_affd1feccdb225997be494bcdb0572fa6}{Arbre}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{struct_arbre}{Arbre}} struct is a tree containing a weight, a letter and two childs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_occurrences_manager_8h_a681aa65dd5fbf7409c32125dbccc29d5}\label{_occurrences_manager_8h_a681aa65dd5fbf7409c32125dbccc29d5}} 
+typedef struct \mbox{\hyperlink{struct_occurrences}{Occurrences}} \mbox{\hyperlink{_occurrences_manager_8h_a681aa65dd5fbf7409c32125dbccc29d5}{Occurrences}}
+\begin{DoxyCompactList}\small\item\em The Occurences struct is a list containing an \mbox{\hyperlink{struct_arbre}{Arbre}} tree knot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_occurrences_manager_8h_a62a3cc60710b3b35d3685e1674274770}\label{_occurrences_manager_8h_a62a3cc60710b3b35d3685e1674274770}} 
+typedef struct \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} \mbox{\hyperlink{_occurrences_manager_8h_a62a3cc60710b3b35d3685e1674274770}{Occurrences\+List}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} struct is a host containing an \mbox{\hyperlink{struct_occurrences}{Occurrences}} list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_occurrences}{Occurrences}} $\ast$ \mbox{\hyperlink{_occurrences_manager_8h_a8884ece85405adeedf0e2bb323550387}{get\+Occurrences}} (char $\ast$texte)
+\begin{DoxyCompactList}\small\item\em Function to create a \mbox{\hyperlink{struct_occurrences}{Occurrences}} via a char$\ast$ text. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_occurrences}{Occurrences}} $\ast$ \mbox{\hyperlink{_occurrences_manager_8h_a254bf9c27955420a7bc55f80b5262607}{remove\+Min}} (\mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$list\+Host)
+\begin{DoxyCompactList}\small\item\em Function to remove the minimum \mbox{\hyperlink{struct_occurrences}{Occurrences}} in an \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}}. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_occurrences_manager_8h_ad6737992f8baedf770d94b60cbc9dbdc}{remove\+At}} (int it, \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$for\+List)
+\begin{DoxyCompactList}\small\item\em Function to remove a \mbox{\hyperlink{struct_occurrences}{Occurrences}} on the given position in the \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} list. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_occurrences_manager_8h_a53cfdfcf1b83bc21021de7247fa93048}{minpos}} (\mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$list\+Host)
+\begin{DoxyCompactList}\small\item\em Function to retrive the minimum \mbox{\hyperlink{struct_occurrences}{Occurrences}} position in the \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} list. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_occurrences_manager_8h_af4bb8132bb0f848a7fc1bda578517bab}{crea\+\_\+noeud}} (\mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$ocl)
+\begin{DoxyCompactList}\small\item\em Function to create an \mbox{\hyperlink{struct_arbre}{Arbre}} tree knot. ~\newline
+ Example \+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header of the library allowing the management of \mbox{\hyperlink{struct_arbre}{Arbre}}, \mbox{\hyperlink{struct_occurrences}{Occurrences}} and \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}}. 
+
+\begin{DoxyAuthor}{Author}
+Michael N\+A\+SS \href{mailto:michael.nass@efrei.net}{\texttt{ michael.\+nass@efrei.\+net}}, Nassim B\+E\+L\+L\+IK \href{mailto:nassim.bellik@efrei.net}{\texttt{ nassim.\+bellik@efrei.\+net}}, Vincent M\+A\+R\+G\+U\+ET \href{mailto:vincent.marguet@efrei.net}{\texttt{ vincent.\+marguet@efrei.\+net}}, Martin G\+A\+Y\+ET \href{mailto:martin.gayet@efrei.net}{\texttt{ martin.\+gayet@efrei.\+net}}, Martin F\+R\+IN \href{mailto:martin.frin@efrei.net}{\texttt{ martin.\+frin@efrei.\+net}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_occurrences_manager_8h_af4bb8132bb0f848a7fc1bda578517bab}\label{_occurrences_manager_8h_af4bb8132bb0f848a7fc1bda578517bab}} 
+\index{OccurrencesManager.h@{OccurrencesManager.h}!crea\_noeud@{crea\_noeud}}
+\index{crea\_noeud@{crea\_noeud}!OccurrencesManager.h@{OccurrencesManager.h}}
+\doxysubsubsection{\texorpdfstring{crea\_noeud()}{crea\_noeud()}}
+{\footnotesize\ttfamily void crea\+\_\+noeud (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$}]{ocl }\end{DoxyParamCaption})}
+
+
+
+Function to create an \mbox{\hyperlink{struct_arbre}{Arbre}} tree knot. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_occurrences_manager_8h_af4bb8132bb0f848a7fc1bda578517bab}{crea\_noeud}}(occurrencesList);}
+\end{DoxyCode}
+ 
+
+Definition at line 105 of file Occurrences\+Manager.\+c.
+
+\mbox{\Hypertarget{_occurrences_manager_8h_a8884ece85405adeedf0e2bb323550387}\label{_occurrences_manager_8h_a8884ece85405adeedf0e2bb323550387}} 
+\index{OccurrencesManager.h@{OccurrencesManager.h}!getOccurrences@{getOccurrences}}
+\index{getOccurrences@{getOccurrences}!OccurrencesManager.h@{OccurrencesManager.h}}
+\doxysubsubsection{\texorpdfstring{getOccurrences()}{getOccurrences()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_occurrences}{Occurrences}}$\ast$ get\+Occurrences (\begin{DoxyParamCaption}\item[{char $\ast$}]{texte }\end{DoxyParamCaption})}
+
+
+
+Function to create a \mbox{\hyperlink{struct_occurrences}{Occurrences}} via a char$\ast$ text. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct_occurrences}{Occurrences}}* occurrences = \mbox{\hyperlink{_occurrences_manager_8h_a8884ece85405adeedf0e2bb323550387}{getOccurrences}}(\textcolor{stringliteral}{"{}Hello World!"{}});}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{struct_occurrences}{Occurrences}}\textquotesingle{}s pointer. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Occurrences\+Manager.\+c.
+
+\mbox{\Hypertarget{_occurrences_manager_8h_a53cfdfcf1b83bc21021de7247fa93048}\label{_occurrences_manager_8h_a53cfdfcf1b83bc21021de7247fa93048}} 
+\index{OccurrencesManager.h@{OccurrencesManager.h}!minpos@{minpos}}
+\index{minpos@{minpos}!OccurrencesManager.h@{OccurrencesManager.h}}
+\doxysubsubsection{\texorpdfstring{minpos()}{minpos()}}
+{\footnotesize\ttfamily int minpos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$}]{list\+Host }\end{DoxyParamCaption})}
+
+
+
+Function to retrive the minimum \mbox{\hyperlink{struct_occurrences}{Occurrences}} position in the \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} list. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_occurrences_manager_8h_a53cfdfcf1b83bc21021de7247fa93048}{minpos}} = \mbox{\hyperlink{_occurrences_manager_8h_a53cfdfcf1b83bc21021de7247fa93048}{minpos}}(occurrencesList);}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the int position of the minimum. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Occurrences\+Manager.\+c.
+
+\mbox{\Hypertarget{_occurrences_manager_8h_ad6737992f8baedf770d94b60cbc9dbdc}\label{_occurrences_manager_8h_ad6737992f8baedf770d94b60cbc9dbdc}} 
+\index{OccurrencesManager.h@{OccurrencesManager.h}!removeAt@{removeAt}}
+\index{removeAt@{removeAt}!OccurrencesManager.h@{OccurrencesManager.h}}
+\doxysubsubsection{\texorpdfstring{removeAt()}{removeAt()}}
+{\footnotesize\ttfamily void remove\+At (\begin{DoxyParamCaption}\item[{int}]{it,  }\item[{\mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$}]{for\+List }\end{DoxyParamCaption})}
+
+
+
+Function to remove a \mbox{\hyperlink{struct_occurrences}{Occurrences}} on the given position in the \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} list. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_occurrences_manager_8h_ad6737992f8baedf770d94b60cbc9dbdc}{removeAt}}(2, occurrencesList);}
+\end{DoxyCode}
+ 
+
+Definition at line 10 of file Occurrences\+Manager.\+c.
+
+\mbox{\Hypertarget{_occurrences_manager_8h_a254bf9c27955420a7bc55f80b5262607}\label{_occurrences_manager_8h_a254bf9c27955420a7bc55f80b5262607}} 
+\index{OccurrencesManager.h@{OccurrencesManager.h}!removeMin@{removeMin}}
+\index{removeMin@{removeMin}!OccurrencesManager.h@{OccurrencesManager.h}}
+\doxysubsubsection{\texorpdfstring{removeMin()}{removeMin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_occurrences}{Occurrences}}$\ast$ remove\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}} $\ast$}]{list\+Host }\end{DoxyParamCaption})}
+
+
+
+Function to remove the minimum \mbox{\hyperlink{struct_occurrences}{Occurrences}} in an \mbox{\hyperlink{struct_occurrences_list}{Occurrences\+List}}. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct_occurrences}{Occurrences}}* minimum = \mbox{\hyperlink{_occurrences_manager_8h_a254bf9c27955420a7bc55f80b5262607}{removeMin}}(occurrencesList);}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the minimum \mbox{\hyperlink{struct_occurrences}{Occurrences}}\textquotesingle{}s pointer. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Occurrences\+Manager.\+c.
+

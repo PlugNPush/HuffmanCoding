@@ -1,0 +1,86 @@
+\hypertarget{_binary_manager_8h}{}\doxysection{Huffman\+Coding/\+Binary\+Manager.h File Reference}
+\label{_binary_manager_8h}\index{HuffmanCoding/BinaryManager.h@{HuffmanCoding/BinaryManager.h}}
+
+
+Header of the library allowing the management of \mbox{\hyperlink{struct_dico}{Dico}}.  
+
+
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_dico}{Dico}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_binary_manager_8h_a696bc07870b635a2b719cc1ab7c0b2bc}\label{_binary_manager_8h_a696bc07870b635a2b719cc1ab7c0b2bc}} 
+typedef struct \mbox{\hyperlink{struct_dico}{Dico}} \mbox{\hyperlink{_binary_manager_8h_a696bc07870b635a2b719cc1ab7c0b2bc}{Dico}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{struct_dico}{Dico}} struct is a list containing a couple of letters and Huffman binary codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{_binary_manager_8h_a366b267966b8c65e1638316c43bb2066}{get\+\_\+binary}} (char character)
+\begin{DoxyCompactList}\small\item\em Function to get the A\+S\+C\+II binary code for a given character. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dico}{Dico}} $\ast$ \mbox{\hyperlink{_binary_manager_8h_a4de3797105c9d50c805730c8912d35ce}{import\+\_\+dico}} (char $\ast$location)
+\begin{DoxyCompactList}\small\item\em Function to create a \mbox{\hyperlink{struct_dico}{Dico}} via the reading of a given file. ~\newline
+ Example \+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header of the library allowing the management of \mbox{\hyperlink{struct_dico}{Dico}}. 
+
+\begin{DoxyAuthor}{Author}
+Michael N\+A\+SS \href{mailto:michael.nass@efrei.net}{\texttt{ michael.\+nass@efrei.\+net}}, Nassim B\+E\+L\+L\+IK \href{mailto:nassim.bellik@efrei.net}{\texttt{ nassim.\+bellik@efrei.\+net}}, Vincent M\+A\+R\+G\+U\+ET \href{mailto:vincent.marguet@efrei.net}{\texttt{ vincent.\+marguet@efrei.\+net}}, Martin G\+A\+Y\+ET \href{mailto:martin.gayet@efrei.net}{\texttt{ martin.\+gayet@efrei.\+net}}, Martin F\+R\+IN \href{mailto:martin.frin@efrei.net}{\texttt{ martin.\+frin@efrei.\+net}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_binary_manager_8h_a366b267966b8c65e1638316c43bb2066}\label{_binary_manager_8h_a366b267966b8c65e1638316c43bb2066}} 
+\index{BinaryManager.h@{BinaryManager.h}!get\_binary@{get\_binary}}
+\index{get\_binary@{get\_binary}!BinaryManager.h@{BinaryManager.h}}
+\doxysubsubsection{\texorpdfstring{get\_binary()}{get\_binary()}}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+binary (\begin{DoxyParamCaption}\item[{char}]{character }\end{DoxyParamCaption})}
+
+
+
+Function to get the A\+S\+C\+II binary code for a given character. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* a\_ascii = \mbox{\hyperlink{_binary_manager_8h_a366b267966b8c65e1638316c43bb2066}{get\_binary}}(\textcolor{charliteral}{'a'});}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the A\+S\+C\+II binary code\textquotesingle{}s char pointer. 
+\end{DoxyReturn}
+
+
+Definition at line 10 of file Binary\+Manager.\+c.
+
+\mbox{\Hypertarget{_binary_manager_8h_a4de3797105c9d50c805730c8912d35ce}\label{_binary_manager_8h_a4de3797105c9d50c805730c8912d35ce}} 
+\index{BinaryManager.h@{BinaryManager.h}!import\_dico@{import\_dico}}
+\index{import\_dico@{import\_dico}!BinaryManager.h@{BinaryManager.h}}
+\doxysubsubsection{\texorpdfstring{import\_dico()}{import\_dico()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_dico}{Dico}}$\ast$ import\+\_\+dico (\begin{DoxyParamCaption}\item[{char $\ast$}]{location }\end{DoxyParamCaption})}
+
+
+
+Function to create a \mbox{\hyperlink{struct_dico}{Dico}} via the reading of a given file. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{struct_dico}{Dico}}* dico = \mbox{\hyperlink{_binary_manager_8h_a4de3797105c9d50c805730c8912d35ce}{import\_dico}}(\textcolor{stringliteral}{"{}Dico.txt"{}});}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{struct_dico}{Dico}}\textquotesingle{}s pointer. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Binary\+Manager.\+c.
+
