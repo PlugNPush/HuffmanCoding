@@ -1,3 +1,12 @@
+/*****************************************************************//**
+ * \file   global.h
+ * \brief  Header of the library containing the essential libraries.
+ *
+ * \author Michael NASS michael.nass@efrei.net, Nassim BELLIK nassim.bellik@efrei.net, Vincent MARGUET vincent.marguet@efrei.net, Martin GAYET martin.gayet@efrei.net, Martin FRIN martin.frin@efrei.net
+ * \date   December 2020
+*********************************************************************/
+
+
 //
 //  glonbal.h
 //  HuffmanCoding
