@@ -1,0 +1,237 @@
+\hypertarget{_file_manager_8h}{}\doxysection{Huffman\+Coding/\+File\+Manager.h File Reference}
+\label{_file_manager_8h}\index{HuffmanCoding/FileManager.h@{HuffmanCoding/FileManager.h}}
+
+
+Header of the library allowing the management, encoding and decoding of F\+I\+LE using \mbox{\hyperlink{struct_arbre}{Arbre}}.  
+
+
+{\ttfamily \#include \char`\"{}Binary\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Occurrences\+Manager.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_file_manager_8h_aa25d1fb5da4561e4ee47b0b3b276d176}{depth}} (\mbox{\hyperlink{struct_arbre}{Arbre}} $\ast$tree)
+\begin{DoxyCompactList}\small\item\em Function to get the depth of an \mbox{\hyperlink{struct_arbre}{Arbre}} tree. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_file_manager_8h_a5ac29a4dd4a57080f6547ab91b25d078}{export\+\_\+dico}} (char $\ast$location, \mbox{\hyperlink{struct_arbre}{Arbre}} $\ast$noeud, char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Function to write a \mbox{\hyperlink{struct_dico}{Dico}} to a given location using an \mbox{\hyperlink{struct_arbre}{Arbre}} tree and an empty char pointer. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_file_manager_8h_ab93072bb7a1a763110445116d2d690b8}{create\+\_\+dico}} (F\+I\+LE $\ast$output, \mbox{\hyperlink{struct_arbre}{Arbre}} $\ast$noeud, char $\ast$val)
+\begin{DoxyCompactList}\small\item\em Function to write a \mbox{\hyperlink{struct_dico}{Dico}} to a given F\+I\+LE using an \mbox{\hyperlink{struct_arbre}{Arbre}} tree and an empty char pointer. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_file_manager_8h_aaeb40e5b49a7431c183d2279e4b6e67a}{load\+\_\+binary}} (char $\ast$location, char $\ast$$\ast$binaire)
+\begin{DoxyCompactList}\small\item\em Function to read an entire file of a given location into a char pointer. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_file_manager_8h_a6a661a21ff1d2ca1769089dc5a9bc084}{calculate\+\_\+size}} (char $\ast$location)
+\begin{DoxyCompactList}\small\item\em Function to get the number of characters in a given file location. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_file_manager_8h_ae4dd454a95a569b16698200729cecd3f}{save\+\_\+output}} (char $\ast$dico\+\_\+location, char $\ast$compressed\+Location, char $\ast$ascii\+Location, char $\ast$texte)
+\begin{DoxyCompactList}\small\item\em Function to save the Huffman and A\+S\+C\+II binary codes for a given text using given dictionnary and export locations. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{_file_manager_8h_ace9aa59ac97f1d3ca2bf15fba1b753b3}{get\+\_\+dico}} (char $\ast$location, char character)
+\begin{DoxyCompactList}\small\item\em Function to get the Huffman binary code for a given character. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_file_manager_8h_a5c3a9288979f2fef6b18dfddc2267258}{decode\+\_\+dico}} (char $\ast$dico\+Location, char $\ast$export\+Location, char $\ast$sequence, int max\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em Function to get the dictionnary translation for a given Huffman binary code sequence, dictionnary location, export location and maximum bits. ~\newline
+ Example \+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_file_manager_8h_a160b0044d50f62b295be991fd7bda0ad}{get\+\_\+max\+\_\+bits}} (char $\ast$location)
+\begin{DoxyCompactList}\small\item\em Function to get the maximum bits in a dictionnary. ~\newline
+ Example \+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header of the library allowing the management, encoding and decoding of F\+I\+LE using \mbox{\hyperlink{struct_arbre}{Arbre}}. 
+
+\begin{DoxyAuthor}{Author}
+Michael N\+A\+SS \href{mailto:michael.nass@efrei.net}{\texttt{ michael.\+nass@efrei.\+net}}, Nassim B\+E\+L\+L\+IK \href{mailto:nassim.bellik@efrei.net}{\texttt{ nassim.\+bellik@efrei.\+net}}, Vincent M\+A\+R\+G\+U\+ET \href{mailto:vincent.marguet@efrei.net}{\texttt{ vincent.\+marguet@efrei.\+net}}, Martin G\+A\+Y\+ET \href{mailto:martin.gayet@efrei.net}{\texttt{ martin.\+gayet@efrei.\+net}}, Martin F\+R\+IN \href{mailto:martin.frin@efrei.net}{\texttt{ martin.\+frin@efrei.\+net}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_file_manager_8h_a6a661a21ff1d2ca1769089dc5a9bc084}\label{_file_manager_8h_a6a661a21ff1d2ca1769089dc5a9bc084}} 
+\index{FileManager.h@{FileManager.h}!calculate\_size@{calculate\_size}}
+\index{calculate\_size@{calculate\_size}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{calculate\_size()}{calculate\_size()}}
+{\footnotesize\ttfamily int calculate\+\_\+size (\begin{DoxyParamCaption}\item[{char $\ast$}]{location }\end{DoxyParamCaption})}
+
+
+
+Function to get the number of characters in a given file location. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} size = \mbox{\hyperlink{_file_manager_8h_a6a661a21ff1d2ca1769089dc5a9bc084}{calculate\_size}}(\textcolor{stringliteral}{"{}Output.txt"{}});}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the int number of characters in the file. 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_ab93072bb7a1a763110445116d2d690b8}\label{_file_manager_8h_ab93072bb7a1a763110445116d2d690b8}} 
+\index{FileManager.h@{FileManager.h}!create\_dico@{create\_dico}}
+\index{create\_dico@{create\_dico}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{create\_dico()}{create\_dico()}}
+{\footnotesize\ttfamily void create\+\_\+dico (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{output,  }\item[{\mbox{\hyperlink{struct_arbre}{Arbre}} $\ast$}]{noeud,  }\item[{char $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Function to write a \mbox{\hyperlink{struct_dico}{Dico}} to a given F\+I\+LE using an \mbox{\hyperlink{struct_arbre}{Arbre}} tree and an empty char pointer. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_file_manager_8h_ab93072bb7a1a763110445116d2d690b8}{create\_dico}}(output, tree, emptyChar);}
+\end{DoxyCode}
+ 
+
+Definition at line 130 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_a5c3a9288979f2fef6b18dfddc2267258}\label{_file_manager_8h_a5c3a9288979f2fef6b18dfddc2267258}} 
+\index{FileManager.h@{FileManager.h}!decode\_dico@{decode\_dico}}
+\index{decode\_dico@{decode\_dico}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{decode\_dico()}{decode\_dico()}}
+{\footnotesize\ttfamily void decode\+\_\+dico (\begin{DoxyParamCaption}\item[{char $\ast$}]{dico\+Location,  }\item[{char $\ast$}]{export\+Location,  }\item[{char $\ast$}]{sequence,  }\item[{int}]{max\+\_\+bits }\end{DoxyParamCaption})}
+
+
+
+Function to get the dictionnary translation for a given Huffman binary code sequence, dictionnary location, export location and maximum bits. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_file_manager_8h_a5c3a9288979f2fef6b18dfddc2267258}{decode\_dico}}(\textcolor{stringliteral}{"{}Dico.txt"{}}, \textcolor{stringliteral}{"{}HuffmanDecoded.txt"{}}, sequence, maxBits);}
+\end{DoxyCode}
+ 
+
+Definition at line 175 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_aa25d1fb5da4561e4ee47b0b3b276d176}\label{_file_manager_8h_aa25d1fb5da4561e4ee47b0b3b276d176}} 
+\index{FileManager.h@{FileManager.h}!depth@{depth}}
+\index{depth@{depth}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{depth()}{depth()}}
+{\footnotesize\ttfamily int depth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arbre}{Arbre}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+
+
+Function to get the depth of an \mbox{\hyperlink{struct_arbre}{Arbre}} tree. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_file_manager_8h_aa25d1fb5da4561e4ee47b0b3b276d176}{depth}} = \mbox{\hyperlink{_file_manager_8h_aa25d1fb5da4561e4ee47b0b3b276d176}{depth}}(tree);}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the depth of the \mbox{\hyperlink{struct_arbre}{Arbre}} tree. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_a5ac29a4dd4a57080f6547ab91b25d078}\label{_file_manager_8h_a5ac29a4dd4a57080f6547ab91b25d078}} 
+\index{FileManager.h@{FileManager.h}!export\_dico@{export\_dico}}
+\index{export\_dico@{export\_dico}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{export\_dico()}{export\_dico()}}
+{\footnotesize\ttfamily void export\+\_\+dico (\begin{DoxyParamCaption}\item[{char $\ast$}]{location,  }\item[{\mbox{\hyperlink{struct_arbre}{Arbre}} $\ast$}]{noeud,  }\item[{char $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Function to write a \mbox{\hyperlink{struct_dico}{Dico}} to a given location using an \mbox{\hyperlink{struct_arbre}{Arbre}} tree and an empty char pointer. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_file_manager_8h_a5ac29a4dd4a57080f6547ab91b25d078}{export\_dico}}(\textcolor{stringliteral}{"{}Dico.txt"{}}, tree, emptyChar);}
+\end{DoxyCode}
+ 
+
+Definition at line 148 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_ace9aa59ac97f1d3ca2bf15fba1b753b3}\label{_file_manager_8h_ace9aa59ac97f1d3ca2bf15fba1b753b3}} 
+\index{FileManager.h@{FileManager.h}!get\_dico@{get\_dico}}
+\index{get\_dico@{get\_dico}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{get\_dico()}{get\_dico()}}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+dico (\begin{DoxyParamCaption}\item[{char $\ast$}]{location,  }\item[{char}]{character }\end{DoxyParamCaption})}
+
+
+
+Function to get the Huffman binary code for a given character. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* a\_huffman = \mbox{\hyperlink{_file_manager_8h_ace9aa59ac97f1d3ca2bf15fba1b753b3}{get\_dico}}(\textcolor{stringliteral}{"{}Dico.txt"{}}, \textcolor{charliteral}{'a'});}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the Huffman binary code\textquotesingle{}s char pointer. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_a160b0044d50f62b295be991fd7bda0ad}\label{_file_manager_8h_a160b0044d50f62b295be991fd7bda0ad}} 
+\index{FileManager.h@{FileManager.h}!get\_max\_bits@{get\_max\_bits}}
+\index{get\_max\_bits@{get\_max\_bits}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{get\_max\_bits()}{get\_max\_bits()}}
+{\footnotesize\ttfamily int get\+\_\+max\+\_\+bits (\begin{DoxyParamCaption}\item[{char $\ast$}]{location }\end{DoxyParamCaption})}
+
+
+
+Function to get the maximum bits in a dictionnary. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} size = \mbox{\hyperlink{_file_manager_8h_a160b0044d50f62b295be991fd7bda0ad}{get\_max\_bits}}(\textcolor{stringliteral}{"{}Dico.txt"{}});}
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+the int value of the maximum bits. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_aaeb40e5b49a7431c183d2279e4b6e67a}\label{_file_manager_8h_aaeb40e5b49a7431c183d2279e4b6e67a}} 
+\index{FileManager.h@{FileManager.h}!load\_binary@{load\_binary}}
+\index{load\_binary@{load\_binary}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{load\_binary()}{load\_binary()}}
+{\footnotesize\ttfamily void load\+\_\+binary (\begin{DoxyParamCaption}\item[{char $\ast$}]{location,  }\item[{char $\ast$$\ast$}]{binaire }\end{DoxyParamCaption})}
+
+
+
+Function to read an entire file of a given location into a char pointer. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_file_manager_8h_aaeb40e5b49a7431c183d2279e4b6e67a}{load\_binary}}(\textcolor{stringliteral}{"{}Alice.txt"{}}, text);}
+\end{DoxyCode}
+ 
+
+Definition at line 56 of file File\+Manager.\+c.
+
+\mbox{\Hypertarget{_file_manager_8h_ae4dd454a95a569b16698200729cecd3f}\label{_file_manager_8h_ae4dd454a95a569b16698200729cecd3f}} 
+\index{FileManager.h@{FileManager.h}!save\_output@{save\_output}}
+\index{save\_output@{save\_output}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{save\_output()}{save\_output()}}
+{\footnotesize\ttfamily void save\+\_\+output (\begin{DoxyParamCaption}\item[{char $\ast$}]{dico\+\_\+location,  }\item[{char $\ast$}]{compressed\+Location,  }\item[{char $\ast$}]{ascii\+Location,  }\item[{char $\ast$}]{texte }\end{DoxyParamCaption})}
+
+
+
+Function to save the Huffman and A\+S\+C\+II binary codes for a given text using given dictionnary and export locations. ~\newline
+ Example \+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_file_manager_8h_ae4dd454a95a569b16698200729cecd3f}{save\_output}}(\textcolor{stringliteral}{"{}Dico.txt"{}}, \textcolor{stringliteral}{"{}Output.txt"{}}, \textcolor{stringliteral}{"{}ASCIIOutput.txt"{}}, text);}
+\end{DoxyCode}
+ 
+
+Definition at line 11 of file File\+Manager.\+c.
+
